@@ -1,0 +1,313 @@
+body {
+    font-family: 'Uni Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+
+}
+
+/* HEADER */
+
+header {
+    position: fixed; /* Makes the header sticky */
+    top: 0; /* Keeps it at the top */
+    left: 0;
+    width: 100%;
+    height: 12vh;
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between elements */
+    align-items: center; /* Center items vertically */
+    background-color: rgba(0, 0, 0); /* Semi-transparent background */
+    color: white;
+    z-index: 1000; /* Ensures it stays above other content */
+    border-bottom: 1px solid white;
+}
+
+header .logo {
+    text-decoration: none; /* Remove underline */
+    color: rgb(255, 0, 0); /* Inherit color from h1 */
+}
+
+header .logo h1 {
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+header h1 {
+    padding-left: 5vh;
+    color:red;
+}
+
+header nav {
+    padding-right: 5vh;
+}
+
+nav {
+    display: flex; /* Flexbox for navigation */
+    gap: 15px; /* Space between links */
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px; /* Add padding for clickable area */
+    border-radius: 5px; /* Rounded corners */
+    transition: background 0.3s; /* Smooth transition */
+}
+
+nav a:hover {
+    color: red;
+    text-decoration: none;
+}
+
+/* HERO */
+
+.hero_container {
+    display: flex;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    background-color: black;
+}
+
+.hero_img {
+    background-image: url('img/hero.gif'); 
+    background-image: 
+    linear-gradient(to right, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 1.0) 100%), /* Gradient */
+    url('img/hero.gif'); /* Your GIF path */
+    background-size: cover; /* Cover the entire area */
+    background-position: left; /* Center the GIF */
+    width: 55%; /* Full width */
+    height: 110%;
+    position: relative; /* Relative positioning for stacking context */
+}
+
+.about_me {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center the text vertically */
+    width: 45%; /* Adjust width as needed */
+    text-align: left; /* Center the text */
+    margin-left: 20px; /* Space between hero and about me */
+    color: white;
+    background-color: rgba(0, 0, 0); /* Slightly transparent background */
+    padding: 20px; /* Padding inside the about me section */
+}
+
+.about_me h2 {
+    color: white;
+    font-size: 4em;
+}
+
+.about_me h3 {
+    color: purple;
+    font-size:2em;
+}
+
+.about_me p {
+    color: white;
+    line-height: 200%;
+}
+
+/* CONTENT */
+
+.ed {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    color: white;
+    width: 100%;
+    height: 80vh;
+    padding-top: 10vh;
+    justify-content:flex-start;
+}
+
+.ed h2 {
+    color: white;
+    font-size: 3em;
+    text-align: left;
+    padding-left: 10vh;
+    padding-bottom: 5vh;
+    border-bottom: 1px solid white;
+}
+
+.ed h3 {
+    color:red;
+    text-align: left;
+    line-height: 2.5;
+    padding-left: 10vh;
+    font-size: 1.2em;
+}
+
+.ed b {
+    color: white;
+    text-align: left;
+    padding-left:5vh;
+}
+
+.exp {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    color: white;
+    width: 100%;
+    height: 75vh;
+    padding-top: 10vh;
+}
+
+.exp h2 {
+    color: white;
+    font-size: 3em;
+    text-align: left;
+    padding-left: 10vh;
+    padding-bottom: 5vh;
+    border-bottom: 1px solid white;
+}
+
+.job {
+    display: flex; 
+    justify-content: space-between; 
+    padding: 0 10vh; 
+    margin-bottom: 10px; 
+    font-size: 1.2em;
+    line-height: 3.0;
+}
+
+.job-title {
+    flex: 1; 
+    text-align: left; 
+}
+
+.job-date {
+    text-align: right; 
+    color: purple; 
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    color: white;
+    width: 100%;
+    height: 100vh;
+    justify-content:flex-start;
+}
+
+.skill h2 {
+    color: white;
+    font-size: 3em;
+    text-align: left;
+    padding-left: 10vh;
+    padding-bottom: 5vh;
+    padding-top: 10vh;
+    border-bottom: 1px solid white;
+}
+
+.skill h3 {
+    color:white;
+    text-align: left;
+    padding-left: 15vh;
+    font-size: 2.0em;
+}
+
+.skill p {
+    color: white;
+    text-align: left;
+    padding-left:25vh;
+    font-size: 1.3em;
+}
+
+.skill u {
+    color: red;
+}
+
+.cont {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    color: white;
+    width: 100%;
+    height: 100vh;
+    justify-content:flex-start;
+}
+
+.cont h2 {
+    color: white;
+    font-size: 1.5em;
+    text-align: center;
+    padding-top: 20vh;
+    border-top: 1px solid white;
+    line-height: 1.0;
+}
+
+.cont b {
+    color: white;
+    text-align: center;
+    font-size: 2.0em;
+}
+
+.cont u {
+    color: purple;
+}
+
+#contactForm {
+    display: flex;
+    flex-direction: column; /* Stack rows vertically */
+    width: 100%; /* Full width */
+    max-width: 600px; /* Limit width for better aesthetics */
+    margin: 0 auto; /* Center the form */
+    padding: 20px; /* Optional: Add padding */
+}
+
+.form-row {
+    display: flex; /* Use Flexbox for each row */
+    align-items: center; /* Center items vertically */
+    margin-bottom: 15px; /* Space between rows */
+}
+
+.form-row label {
+    margin-right: 10px; /* Space between label and input */
+    flex: 1; /* Allow labels to take up equal space */
+}
+
+.form-row input,
+.form-row textarea {
+    flex: 2; /* Inputs take up more space */
+    padding: 8px; /* Padding for input fields */
+    border: 1px solid #ccc; /* Border styling */
+    border-radius: 4px; /* Rounded corners */
+}
+
+textarea {
+    resize: vertical; /* Allow vertical resizing */
+    height: 100px; /* Set a height for the textarea */
+    color: white;
+}
+
+button {
+    padding: 10px 20px; /* Padding for the button */
+    background-color: black; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.footer {
+    border-top: 1px solid white;
+    display: flex; /* Use Flexbox for layout */
+    justify-content: space-between; /* Space between items */
+    align-items: center; /* Center items vertically */
+    background-color: black; /* Background color */
+    color: white; /* Text color */
+    padding: 20px; /* Padding around the footer */
+}
+
+.footer h2 {
+    margin: 0; /* Remove default margin */
+    font-size: 0.9em; /* Adjust font size as needed */
+}
+
+.logo {
+    text-decoration: none; /* Remove underline */
+    color: white; /* Text color for the link */
+    font-size: 0.9em; /* Same font size as h2 */
+}
+

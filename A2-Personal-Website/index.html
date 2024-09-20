@@ -9,46 +9,114 @@
 
     <body>
         <header>
-            <h1>Jeremy Narlin</h1>
+            <a href="#home" class="logo"><h1>J.N.</h1></a>
+            <nav>
+                <a href="#education"><b>EDUCATION</b></a>
+                <a href="#experience"><b>EXPERIENCE</b></a>
+                <a href="#skills"><b>SKILLS</b></a>
+                <a href="#contact"><b>CONTACT</b></a>
+            </nav>
         </header>
 
-        <main>
-            <h3>Major: Interactive Arts and Technology (Concentration in AI)
-                <br>Minor: Computer Science (Concentration in AI)
-                <br>Interest: Basketball, Barbering, Fashion, Video Games
-            </h3>
-        </main>
+        <section id = "home">
+            <div class = "hero_container">
+                    <div class = "hero_img"></div>
+                    <div class = "about_me">
+                        <h2>JEREMY NARLIN</h2>
+                        <h3>AI ENTHUSIAST</h3>
+                        <p>Hey! I'm majoring in Interactive Arts and Technology and minoring in Computer Science at SFU. More specifically, I'm aspiring to work in the field of Artificial Intelligence. Apart from school, I work as a barber and I like basketball, video games, anime, and clothing!</p>
+                    </div>
+            </div>
+        </section>
 
-        <main2>
-            <h2>Education</h2>
-            <h3>Highschool Diploma: Surrey Christian Secondary School
-                <br>Undergraduate: Simon Fraser University
-            </h3>
-        </main2>
+        <div class = "fade-section">
+        <div class = "content">
+            <section id = "education">
+                <div class = "ed">
+                    <h2>EDUCATION</h2>
+                    <h3>Simon Fraser University | September 2020 - Present (Expected Gradution: April 2026)
+                        <br><b>Interactive Arts & Technology (Major)</b> 
+                        <br><b>Computer Science (Minor)</b>
+                        <br><br>Surrey Christian Secondary School | September 2015 - June 2020
+                        <br><b>BC High School Diploma</b>
+                    </h3>
+                </div>
+            </section>
+            <section id = "experience">
+                <div class = "exp">
+                    <h2>EXPERIENCE</h2>
+                    <div class="job">
+                        <b class="job-title">Self-taught / Home-based Barber . . .</b>
+                        <b class="job-date">(May 2023 - Present)</b>
+                    </div>
+                    <div class="job">
+                        <b class="job-title">Canadian Tire Maple Ridge – Sales Associate . . .</b>
+                        <b class="job-date">(January 2024 - August 2024)</b>
+                    </div>
+                    <div class="job">
+                        <b class="job-title">Denji Sushi – Waiter . . .</b>
+                        <b class="job-date">(July 2022 - January 2024)</b>
+                    </div>
+                    <div class="job">
+                        <b class="job-title">Daeji Cutlet House – Dish Washer . . .</b>
+                        <b class="job-date">(October 2020 - July 2022)</b>
+                    </div>
+                </div>
+            </section>
+            <section id = "skills">
+                <div class = "skill">
+                    <h2>SKILLS</h2>
+                    <h3>LANGUAGES</h3>
+                    <p><u>Advanced:</u> HTML5, CSS, JavaScript
+                        <br><u>Proficient:</u> C, C++, Java, Processing, Python
+                    </p>
+                    <h3>SKILLS</h3>
+                    <p><u>Advanced:</u> Adobe Creative Suite, Unity 3D, Figma, Microsoft Suite Skills</p>
+                </div>
+            </section>
+            <section id = "contact">
+                <div class = "cont">
+                    <h2><b><i>LET'S CONNECT!</i></b>
+                    <br><br>CONTACT ME AT <u><i>jjn9@sfu.ca</i></u> OR FILL OUT THE FORM BELOW</h2>
 
-        <main3>
-            <h2>Experience</h2>
-            <h3>
-                Canadian Tire Maple Ridge – Sales Associate
-                <br>Denji Sushi – Waiter
-                <br>Daeji Cutlet House – Dish Washer
-                <br>B&P Vancouver Rentals – Site Assistant
-            </h3>
-        </main3>
+                    <form id="contactForm">
+                        <div class="form-row">
+                            <label for="firstName">First Name:</label>
+                            <input type="text" id="firstName" required>
+                            
+                            <label for="lastName">Last Name:</label>
+                            <input type="text" id="lastName" required>
+                        </div>
+                    
+                        <div class="form-row">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" required>
+                            
+                            <label for="subject">Subject:</label>
+                            <input type="text" id="subject" required>
+                        </div>
+                    
+                        <div class="form-row">
+                            <label for="message">Message:</label>
+                            <textarea id="message" required></textarea>
+                        </div>
+                    
+                        <div class="form-row">
+                            <button type="submit">Submit</button>
+                        </div>
+                    </form>
 
-        <main4>
-            <h2>Skills</h2>
-            <h3>
-                Languages: C, C++, Java, JS, HTML, CSS, Processing, Python
-                <br>Skills: Adobe Creative Suite, Unity 3D, Figma, Microsoft Suite Skills
-            </h3>
-        </main4>
-
-        <main5>
-            <h2>Contact Me</h2>
-            <h3>Email: jjn9@sfu.ca</h3>
-            <h3>Github: <a href = "https://github.com/jnarlin">jnarlin</a></h3>
-        </main5>
+                    <div id="responseMessage"></div>
+                </div>
+            </section>
+        </div>
+        </div>
+        <script src="script.js"></script>
+        
+        <footer class="footer">
+            <h2>© 2024 by Jeremy Narlin</h2>
+            <a href="#home" class="logo"><h2>↑   BACK TO TOP</h2></a>
+        </footer>
     </body>
 </html>
 
