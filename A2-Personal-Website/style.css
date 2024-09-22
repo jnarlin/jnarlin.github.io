@@ -1,39 +1,30 @@
 body {
-    font-family: 'Uni Sans', sans-serif;
+    font-family: 'Merriweather Sans', sans-serif;
     margin: 0;
     padding: 0;
-
 }
 
 /* HEADER */
 
 header {
-    position: fixed; /* Makes the header sticky */
-    top: 0; /* Keeps it at the top */
+    position: fixed; 
+    top: 0; 
     left: 0;
     width: 100%;
     height: 12vh;
-    display: flex; /* Use flexbox for layout */
-    justify-content: space-between; /* Space between elements */
-    align-items: center; /* Center items vertically */
-    background-color: rgba(0, 0, 0); /* Semi-transparent background */
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    background-color: rgba(0, 0, 0); 
     color: white;
-    z-index: 1000; /* Ensures it stays above other content */
+    z-index: 1000;
     border-bottom: 1px solid white;
 }
 
 header .logo {
-    text-decoration: none; /* Remove underline */
-    color: rgb(255, 0, 0); /* Inherit color from h1 */
-}
-
-header .logo h1 {
-    cursor: pointer; /* Change cursor to pointer */
-}
-
-header h1 {
+    text-decoration: none; 
+    color: rgb(255, 0, 0); 
     padding-left: 5vh;
-    color:red;
 }
 
 header nav {
@@ -41,16 +32,14 @@ header nav {
 }
 
 nav {
-    display: flex; /* Flexbox for navigation */
-    gap: 15px; /* Space between links */
+    display: flex; 
+    gap: 15px; 
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    padding: 5px 10px; /* Add padding for clickable area */
-    border-radius: 5px; /* Rounded corners */
-    transition: background 0.3s; /* Smooth transition */
+    padding: 5px 10px; 
 }
 
 nav a:hover {
@@ -58,37 +47,34 @@ nav a:hover {
     text-decoration: none;
 }
 
-/* HERO */
+/* ABOUT ME */
 
 .hero_container {
     display: flex;
     width: 100%;
-    height: 100vh; /* Full viewport height */
+    height: 100vh;
     background-color: black;
 }
 
 .hero_img {
     background-image: url('img/hero.gif'); 
-    background-image: 
-    linear-gradient(to right, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 1.0) 100%), /* Gradient */
-    url('img/hero.gif'); /* Your GIF path */
-    background-size: cover; /* Cover the entire area */
-    background-position: left; /* Center the GIF */
-    width: 55%; /* Full width */
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 1.0) 100%), url('img/hero.gif'); 
+    background-size: cover; 
+    background-position: left; 
+    width: 55%; 
     height: 110%;
-    position: relative; /* Relative positioning for stacking context */
+    position: relative;
 }
 
 .about_me {
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Center the text vertically */
-    width: 45%; /* Adjust width as needed */
-    text-align: left; /* Center the text */
-    margin-left: 20px; /* Space between hero and about me */
-    color: white;
-    background-color: rgba(0, 0, 0); /* Slightly transparent background */
-    padding: 20px; /* Padding inside the about me section */
+    justify-content: center; 
+    width: 45%; 
+    text-align: left; 
+    margin-left: 20px; 
+    background-color: rgba(0, 0, 0); 
+    padding: 20px; 
 }
 
 .about_me h2 {
@@ -106,7 +92,21 @@ nav a:hover {
     line-height: 200%;
 }
 
-/* CONTENT */
+.arrow {
+    position: absolute; 
+    bottom: 10px; 
+    left: 50%;;
+    font-size: 40px;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.arrow:hover {
+    color: purple; 
+}
+
+/* EDUCATION */
 
 .ed {
     display: flex;
@@ -141,6 +141,8 @@ nav a:hover {
     text-align: left;
     padding-left:5vh;
 }
+
+/* EXPERIENCE */
 
 .exp {
     display: flex;
@@ -180,6 +182,8 @@ nav a:hover {
     color: purple; 
 }
 
+/* SKILLS */
+
 .skill {
     display: flex;
     flex-direction: column;
@@ -195,7 +199,7 @@ nav a:hover {
     font-size: 3em;
     text-align: left;
     padding-left: 10vh;
-    padding-bottom: 5vh;
+    padding-bottom: 3vh;
     padding-top: 10vh;
     border-bottom: 1px solid white;
 }
@@ -218,14 +222,17 @@ nav a:hover {
     color: red;
 }
 
+/* CONTACT */
+
 .cont {
     display: flex;
     flex-direction: column;
     background-color: black;
     color: white;
     width: 100%;
-    height: 100vh;
+    height: 85vh;
     justify-content:flex-start;
+    border-top: 1px solid white;
 }
 
 .cont h2 {
@@ -233,8 +240,19 @@ nav a:hover {
     font-size: 1.5em;
     text-align: center;
     padding-top: 20vh;
-    border-top: 1px solid white;
     line-height: 1.0;
+    
+}
+
+.cont h3 {
+    color: purple;
+    font-size: 1.5em;
+    text-align: center;
+    line-height: 0.6;
+}
+
+.cont a {
+    text-decoration: none;
 }
 
 .cont b {
@@ -247,67 +265,26 @@ nav a:hover {
     color: purple;
 }
 
-#contactForm {
-    display: flex;
-    flex-direction: column; /* Stack rows vertically */
-    width: 100%; /* Full width */
-    max-width: 600px; /* Limit width for better aesthetics */
-    margin: 0 auto; /* Center the form */
-    padding: 20px; /* Optional: Add padding */
-}
-
-.form-row {
-    display: flex; /* Use Flexbox for each row */
-    align-items: center; /* Center items vertically */
-    margin-bottom: 15px; /* Space between rows */
-}
-
-.form-row label {
-    margin-right: 10px; /* Space between label and input */
-    flex: 1; /* Allow labels to take up equal space */
-}
-
-.form-row input,
-.form-row textarea {
-    flex: 2; /* Inputs take up more space */
-    padding: 8px; /* Padding for input fields */
-    border: 1px solid #ccc; /* Border styling */
-    border-radius: 4px; /* Rounded corners */
-}
-
-textarea {
-    resize: vertical; /* Allow vertical resizing */
-    height: 100px; /* Set a height for the textarea */
-    color: white;
-}
-
-button {
-    padding: 10px 20px; /* Padding for the button */
-    background-color: black; /* Button background color */
-    color: white; /* Button text color */
-    border: none; /* No border */
-    border-radius: 4px; /* Rounded corners */
-    cursor: pointer; /* Pointer cursor on hover */
-}
+/* FOOTER */
 
 .footer {
     border-top: 1px solid white;
-    display: flex; /* Use Flexbox for layout */
-    justify-content: space-between; /* Space between items */
-    align-items: center; /* Center items vertically */
-    background-color: black; /* Background color */
-    color: white; /* Text color */
-    padding: 20px; /* Padding around the footer */
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    background-color: black; 
+    color: white; 
+    padding: 20px; 
 }
 
 .footer h2 {
-    margin: 0; /* Remove default margin */
-    font-size: 0.9em; /* Adjust font size as needed */
+    margin: 0; 
+    font-size: 0.9em; 
 }
 
 .logo {
-    text-decoration: none; /* Remove underline */
-    color: white; /* Text color for the link */
-    font-size: 0.9em; /* Same font size as h2 */
+    text-decoration: none; 
+    color: white; 
+    font-size: 0.9em; 
 }
 
