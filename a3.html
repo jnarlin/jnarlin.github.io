@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name = "viewport" content = "width=device-width, inital-scale=1.0">
+        <title>Jeremy Narlin</title>
+        <link rel = "stylesheet" href = "a3.css"> <!-- CSS -->
+        <!-- FONT -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+        <!-- Vega Lite -->
+        <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite-api@5.6.0"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-tooltip"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+        <script>
+        
+            const options = {
+               config: {
+                 // Vega-Lite default configuration
+               },
+               init: (view) => {
+                 // initialize tooltip handler
+                 view.tooltip(new vegaTooltip.Handler().call);
+               },
+               view: {
+                 // view constructor options
+                 // remove the loader if you don't want to default to vega-datasets!
+                 loader: vega.loader({
+                   baseURL: "https://cdn.jsdelivr.net/npm/vega-datasets@2/",
+                 }),
+                 renderer: "canvas",
+               },
+             };
+       
+             // register vega and vega-lite with the API
+             vl.register(vega, vegaLite, options);
+        </script>
+        <style>
+       </style>
+    </head>
+
+    <body>
+        <header> <!-- HEADER -->
+            <a href="index.html" class="logo"><h1>J.N.</h1></a>
+            <nav>
+                <a href = "IAT355.html"><b>IAT355</b></a>
+                <a href="index.html"><b>HOME</b></a>
+            </nav>
+        </header>
+
+        <div class = "visual">
+            <h2><b>Assignment 3: Vega-Lite</b></h2>  
+            <h3>Visualization 1: Global Sales by Genre and Platform</h3>
+            <div id = "visual1">
+                <div id="vis"></div>
+                <div id="vis1"></div>
+            </div>
+            <h3>Visualization 2: Sales Over Time by Platform and Genre</h3>
+            <div id = "vis2"></div>
+            <div id = "vis3"></div>
+            <h3>Visualization 3: Regional Sales vs. Platform</h3>
+            <div id = "vis4"></div>
+            <h3>Visualization 4: Total Number of Games Sold Each Year</h3>
+            <div id = "vis5"></div>
+        </div>
+
+        <footer class="footer"> <!-- FOOTER -->
+            <h2>© 2024 by Jeremy Narlin</h2>
+            <a href="#home" class="logo" id="backToTop"><h2>↑   BACK TO TOP</h2></a>
+        </footer>
+
+        <script src="a3.js"></script> <!-- JS -->
+    </body>
+</html>
+
