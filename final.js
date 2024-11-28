@@ -83,6 +83,11 @@ document.getElementById('togglePlayoffPts').addEventListener('click', function()
     updateButtonText('Playoff PTS');
 });
 
+document.getElementById('toggleSTL').addEventListener('click', function() {
+    render('PLAYOFF PTS'); 
+    updateButtonText('Playoff PTS');
+});
+
 function updateButtonText(stat) {
     const buttons = document.querySelectorAll('button');
     buttons.forEach(button => {
