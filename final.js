@@ -84,8 +84,8 @@ document.getElementById('togglePlayoffPts').addEventListener('click', function()
 });
 
 document.getElementById('toggleSTL').addEventListener('click', function() {
-    render('PLAYOFF PTS'); 
-    updateButtonText('Playoff PTS');
+    render('STL'); 
+    updateButtonText('STL');
 });
 
 function updateButtonText(stat) {
