@@ -37,7 +37,7 @@ arrows.forEach(arrow => {
 
 // RENDER VIS
 async function render(field) {
-    const data = await d3.csv("GOATSTATS.csv");
+    const data = await d3.csv("GOATstats.csv");
     const vlSpec = vl
         .markLine()
         .data(data)  
