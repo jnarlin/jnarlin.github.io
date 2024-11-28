@@ -9,6 +9,38 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+        <!-- Vega Lite -->
+        <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite-api@5.6.0"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-tooltip"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+        <script>
+        
+            const options = {
+               config: {
+                 // Vega-Lite default configuration
+               },
+               init: (view) => {
+                 // initialize tooltip handler
+                 view.tooltip(new vegaTooltip.Handler().call);
+               },
+               view: {
+                 // view constructor options
+                 // remove the loader if you don't want to default to vega-datasets!
+                 loader: vega.loader({
+                   baseURL: "https://cdn.jsdelivr.net/npm/vega-datasets@2/",
+                 }),
+                 renderer: "canvas",
+               },
+             };
+       
+             // register vega and vega-lite with the API
+             vl.register(vega, vegaLite, options);
+        </script>
+        <style>
+       </style>  
     </head>
 
     <body>
@@ -20,24 +52,42 @@
             </nav>
         </header>
 
-        <section id = "home"> <!-- ABOUT ME -->
+        <section id = "home"> <!-- TOPIC / INTRO -->
             <div class = "hero_container">
                     <div class = "hero_img"></div>
-                    <div class = "about_me">
+                    <div class = "about">
                         <h2>The GOAT Debate</h2>
                         <h3>Lebron James vs Michael Jordan</h3>
                         <p>In the world of basketball, two names stand out as the greatest of all time: LeBron James and Michael Jordan. 
                             Both players have left an indelible mark on the NBA, achieving legendary status through their careers. 
                             But the question remains: who is the true "GOAT"? Let's compare their legacies, stats, and impact on the game.</p>
                     </div>
-                <a href="#education" class="arrow">v</a>     
+                <a href="#stats" class="arrow">v</a>     
             </div>
         </section>
 
-        <!-- <footer class="footer">
+        <div class = "content">
+            <section id = "stats"> <!-- Visualizations -->
+                <div class = "vis">
+                    <h2>Statistics</h2> 
+                    <div id = "visual1">
+                        <div id="vis1"></div>
+                    </div>
+                    <div id = "buttons">
+                        <button id="toggleAssists">Assists</button>
+                        <button id="toggleFT">FT%</button>
+                        <button id="toggleFG">FG%</button>
+                        <button id="toggleRegPts">Regular Season PTS</button>
+                        <button id="togglePlayoffPts">Playoff PTS</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <footer class="footer">
             <h2>© 2024 by Jeremy Narlin</h2>
-            <a href="#home" class="logo" id="backToTop2"><h2>↑   BACK TO TOP</h2></a>
-        </footer> -->
+            <a href="#home" class="logo" id="backToTop"><h2>↑   BACK TO TOP</h2></a>
+        </footer>
 
         <script src="final.js"></script> <!-- JS -->
     </body>
