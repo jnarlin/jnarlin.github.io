@@ -85,7 +85,7 @@ document.getElementById('togglePlayoffPts').addEventListener('click', function()
 
 document.getElementById('toggleSTL').addEventListener('click', function() {
     render('STL'); 
-    updateButtonText('STL');
+    updateButtonText('Steals');
 });
 
 function updateButtonText(stat) {
