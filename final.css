@@ -113,13 +113,12 @@ nav a:hover {
 }
 
 /* Player Information */
-/* General styling for the info section */
 #info {
     padding: 20px;
-    background-color: #121212; /* Dark background for the section */
-    color: white; /* White text color for better contrast */
+    background-color: #121212; 
+    color: white; 
     text-align: center;
-    width: 100%; /* Ensure the section takes up the full width of the screen */
+    width: 100%; 
     box-sizing: border-box;
 }
 
@@ -128,13 +127,12 @@ nav a:hover {
     padding-top: 6vh;
 }
 
-/* Players container setup with side-by-side layout */
 .players {
     display: flex;
-    justify-content: center; /* Center the player sections horizontally */
-    align-items: flex-start; /* Align the player sections at the top */
-    gap: 30px; /* Space between the sections */
-    flex-wrap: wrap; /* Allows wrapping to next row on smaller screens */
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px; 
+    flex-wrap: wrap; 
     max-width: 100%;
     margin: 0 auto;
     padding: 0;
@@ -142,35 +140,33 @@ nav a:hover {
 
 .players h1 {
     font-size: 2.5em;
-    color: #f1f1f1; /* Light gray color for the main title */
+    color: white; 
     margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Slight shadow for readability */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
 }
 
-/* Style for each player section (lebron/mj) */
 .players .lebron, .players .mj {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 45%; /* Keep sections side by side */
+    width: 45%; 
     background-color: #1f1f1f;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Soft shadow for a minimalist card effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     text-align: left;
-    margin-bottom: 20px; /* Space between player sections */
-    overflow: hidden;
-    border: 2px solid #333; /* Uniform border for each player section */
-    box-sizing: border-box; /* Ensure padding doesn't affect overall width/height */
+    margin-bottom: 20px; 
+    border: 2px solid #333;
+    box-sizing: border-box; 
 }
 
-/* Player header and content sections */
 .players .lebron .player-header, .players .mj .player-header {
     text-align: center;
     font-size: 1.5em;
+    color: red;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
 }
 
-/* Ensure the paragraph and image are side by side with equal border around them */
 .players .lebron .player-content, .players .mj .player-content {
     display: flex;
     justify-content: flex-start;
@@ -181,14 +177,12 @@ nav a:hover {
 
 .players img {
     width: 50%;
-    max-width: 320px; /* Image size is consistent */
-    height: auto;
+    max-width: 320px; 
     border-radius: 8px;
     margin-top: 10px;
-    border: 2px solid #333; /* Keep border the same for the images */
+    border: 2px solid #333;
 }
 
-/* Ensure the player's description is consistent in width */
 .players p {
     font-size: 1.1em;
     line-height: 1.6;
@@ -196,7 +190,6 @@ nav a:hover {
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
     max-width: 60%;
 }
-
 
 /* Visualizations */ 
 
@@ -251,8 +244,31 @@ button:focus {
     outline: none;  /* Remove focus outline */
 }
 
+/* CONCLUSION */
+#conclusion {
+    padding: 40px;
+    background-color: black;
+    color: white;
+    border-top: 1px solid white; 
+    height: 50vh;
+}
 
+#conclusion h2 {
+    font-size: 3em;
+    color: white;
+    margin-bottom: 20px;
+    text-align: center; 
+}
 
+#conclusion p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: white;
+    text-align: center; 
+    width: 60%;
+    margin: 0 auto;
+}
+    
 /* FOOTER */
 
 .footer {
@@ -275,4 +291,3 @@ button:focus {
     color: white; 
     font-size: 0.9em; 
 }
-
