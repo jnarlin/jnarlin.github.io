@@ -120,11 +120,12 @@ nav a:hover {
     text-align: center;
     width: 100%; 
     box-sizing: border-box;
+    height:100vh;
 }
 
 #info h1 {
     font-size: 3em;
-    padding-top: 6vh;
+    padding-top: 10vh;
 }
 
 .players {
@@ -191,6 +192,10 @@ nav a:hover {
     max-width: 60%;
 }
 
+.players .lebron {
+    min-height: 560px;
+}
+
 /* Visualizations */ 
 
 .vis {
@@ -205,10 +210,12 @@ nav a:hover {
     align-items: center;
 }
 
-.vis h2 {
-    font-size: 2.5em;
+.vis h1 {
+    font-size: 3.5em;
     padding-top: 3vh;
 }
+
+
 
 /* Style the container of the buttons to display them side by side */
 #visual1 {
@@ -221,23 +228,26 @@ nav a:hover {
 
 /* Button styling */
 button {
-    background-color: #007bff;  /* Blue background */
-    color: white;               /* White text */
-    padding: 10px 20px;         /* Padding inside the button */
-    font-size: 16px;            /* Font size */
-    border: none;              /* No border */
-    border-radius: 5px;        /* Rounded corners */
-    cursor: pointer;          /* Pointer cursor on hover */
-    transition: background-color 0.3s ease;  /* Smooth transition for background color */
+    background-color: #444;  /* Dark background for dark theme */
+    color: white;             /* White text for contrast */
+    padding: 12px 25px;     /* Increased padding for larger buttons */
+    font-size: 18px;  
+    margin-top: 30px;        /* Adjusted font size */
+    border: 2px solid #555;   /* Light border for visibility */
+    border-radius: 8px;       /* Rounded corners */
+    cursor: pointer;         /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition */
 }
 
 /* Hover and active states for buttons */
 button:hover {
-    background-color: #0056b3; /* Darker blue when hovered */
+    background-color: #333; /* Darker background on hover */
+    transform: scale(1.05); /* Slightly enlarge button on hover */
 }
 
 button:active {
-    background-color: #004085; /* Even darker blue when button is clicked */
+    background-color: #222; /* Even darker on click */
+    transform: scale(1); /* Reset the scale on click */
 }
 
 button:focus {
@@ -250,7 +260,7 @@ button:focus {
     background-color: black;
     color: white;
     border-top: 1px solid white; 
-    height: 50vh;
+    height: 35vh;
 }
 
 #conclusion h2 {

@@ -42,15 +42,31 @@ async function render(field) {
         .markLine()
         .data(data)  
         .encode(
-            vl.x().fieldQ('Year').title('Year'),  
-            vl.y().fieldQ(field).title(`${field} per Game`), 
+            vl.x().fieldQ('Year').title('Year')  
+                .axis({ labelColor: 'white', titleColor: 'white' }),  // White text for x-axis labels and title
+            vl.y().fieldQ(field).title(`${field} per Game`) 
+                .axis({ labelColor: 'white', titleColor: 'white' }),  // White text for y-axis labels and title
             vl.color().fieldN('Player').type('nominal')  
         )
-        .title(`Comparison of Michael Jordan and LeBron James\' ${field} Over Time`)
+        .title(`Comparison of Michael Jordan and LeBron James' ${field} Over Time`)
         .width(500)
-        .height(300)  
+        .height(300)
+        .config({
+            background: '#1f1f1f',  // Dark background for the chart area
+            title: {
+                color: 'white',  // Set title text to white
+            },
+            axis: {
+                gridColor: '#333',  // Lighter grid lines for contrast
+                domainColor: '#555',  // Darker axis lines to blend in with background
+            },
+            legend: {
+                labelColor: 'white',  // Set legend labels to white
+                titleColor: 'white',   // Set legend title to white
+            }
+        })
         .toSpec();   
-  
+
     const view = await vegaEmbed("#vis1", vlSpec).view;
     view.run();
 }
