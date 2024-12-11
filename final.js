@@ -112,3 +112,27 @@ function updateButtonText(stat) {
         }
     });
 }
+
+// Wait for the DOM to load
+document.addEventListener('DOMContentLoaded', function () {
+    // Get all elements inside .content that should fade in
+    const fadeElements = document.querySelectorAll('.content .fade-in');
+
+    // Intersection Observer to detect when elements come into view
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Add 'visible' class to make them fade in
+                entry.target.classList.add('visible');
+            } else {
+                // Remove 'visible' class to make them fade out when out of view
+                entry.target.classList.remove('visible');
+            }
+        });
+    }, { threshold: 0.1 }); // Trigger when 10% of the element is visible
+
+    // Observe each element
+    fadeElements.forEach(element => {
+        observer.observe(element);
+    });
+});

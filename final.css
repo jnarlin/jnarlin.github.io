@@ -2,6 +2,7 @@ body {
     font-family: 'Merriweather Sans', sans-serif;
     margin: 0;
     padding: 0; 
+    background-color: black;
 }
 
 /* HEADER */
@@ -300,4 +301,22 @@ button:focus {
     text-decoration: none; 
     color: white; 
     font-size: 0.9em; 
+}
+
+/* Fade-in effect with initial black background */
+.fade-in {
+    opacity: 0;
+    background-color: black; /* Start with black background */
+    transition: opacity 1s ease-in-out, background-color 1s ease-in-out; /* Smooth transition */
+}
+
+/* Visible state when element is in view */
+.fade-in.visible {
+    opacity: 1;
+    background-color: black; /* Fade to transparent when visible */
+}
+
+/* Optional: Adding a slight delay to each item for a cascading fade-in effect */
+.fade-in-delay {
+    transition-delay: 2s;
 }
