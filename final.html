@@ -92,30 +92,48 @@
                     </div>
                 </section>
 
-                <section id = "stats"> <!-- Visualizations -->
+                <section id = "stats"> <!-- Statistics -->
                     <div class = "vis fade-in">
                         <h1>Statistics</h1> 
-                        <div id = "visual1">
-                            <div id="vis1" class = "fade=in"></div>
-                        </div>
-                        <div id = "buttons">
+                        <div id="buttons">
+                            <!-- Stat Buttons -->
                             <button id="toggleRegPts">Regular Season PTS</button>
                             <button id="togglePlayoffPts">Playoff PTS</button>
                             <button id="toggleAssists">Assists</button>
-                            <button id="toggleSTL">STL</button>
-                            <button id="toggleFG">FG%</button>
-                            <button id="toggleFT">FT%</button>
+                            <button id="toggleSTL">Steals</button>
+                            <button id="toggleFG">Field Goal %</button>
+                            <button id="toggleFT">Free Throw %</button>
+                        
+                            <!-- Chart Type Button -->
+                            <button id="toggleChartType" class="chart-toggle-button">Switch to Line Chart</button> <!-- Corrected the id here -->
                         </div>
+                        
+                        <!-- Rendering Chart -->
+                        <div id = "visual1">
+                            <div id="vis1" class = "fade=in"></div>
+                        </div>   
+                                 
+                        <!-- Links to Stats Online-->
+                        <div class="links-container">
+                            <a href="https://www.basketball-reference.com/players/j/jamesle01.html" style="color: red;">LeBron James' Stats</a>
+                            <a href="https://www.basketball-reference.com/players/j/jordami01.html" style="color: red;">Michael Jordan's Stats</a>
+                        </div>   
+                        
+                        <!-- Stat Information / Context -->
+                        <div id = "statDescription"></div>
                     </div>
                 </section>
 
+                <!-- CONCLUSION-->
                 <section id = "conclusion" class = "fade-in">
                     <h2>Conclusion</h2>
-                    <p>In the debate between LeBron James and Michael Jordan, both players have left an undeniable mark on the sport of basketball. While their playing styles and career paths differ, their impact on the game is timeless. LeBron continues to break records and evolve his game, while Michael Jordan’s legacy as a winner and clutch performer will always be remembered. Ultimately, the question of who is the GOAT is subjective, but both athletes will forever be icons in the world of basketball.</p>
+                    <p>In the debate between LeBron James and Michael Jordan, both players have left an undeniable mark on the sport of basketball. While their playing styles and career paths differ, their impact on the game is timeless. LeBron continues to break records and evolve his game, while Michael Jordan’s legacy as a winner and clutch performer will always be remembered. Ultimately, the question of who is the GOAT is subjective, but both athletes will forever be icons in the world of basketball. I hope my website and visualizations allows you to come to a consensus regarding who truly is the G.O.A.T. and why its the glorious... <br><b> Lebron Raymone James!</b></p>
+                    <img src="img/pookie.jpg" alt="Pookie" style="width: 70px; height: auto; padding-top:10px; display: block; margin-left: auto; margin-right: auto;">
                 </section>
             </div>
         </div>
 
+        <!-- FOOTER -->
         <footer class="footer">
             <h2>© 2024 by Jeremy Narlin</h2>
             <a href="#home" class="logo" id="backToTop"><h2>↑   BACK TO TOP</h2></a>

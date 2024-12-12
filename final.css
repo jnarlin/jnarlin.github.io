@@ -86,17 +86,18 @@ nav a:hover {
 
 .about h2 {
     color: white;
-    font-size: 4em;
+    font-size: 6em;
 }
 
 .about h3 {
     color: red;
-    font-size:2em;
+    font-size:3em;
 }
 
 .about p {
     color: white;
     line-height: 200%;
+    font-size:1.5em;
 }
 
 .arrow {
@@ -197,7 +198,7 @@ nav a:hover {
     min-height: 560px;
 }
 
-/* Visualizations */ 
+/* GRAPH VISUALIZATION */ 
 
 .vis {
     display: flex;
@@ -205,8 +206,8 @@ nav a:hover {
     background-color: black;
     color: white;
     width: 100%;
-    height: 120vh;
-    padding-top: 4vh;
+    height: 135vh;
+    padding-top: 3vh;
     justify-content: flex-start;
     align-items: center;
 }
@@ -216,43 +217,83 @@ nav a:hover {
     padding-top: 3vh;
 }
 
-
-
-/* Style the container of the buttons to display them side by side */
-#visual1 {
-    display: flex; /* Enable flexbox */
-    flex-wrap: wrap; /* Allow the buttons to wrap to the next line if they don't fit */
-    gap: 10px; /* Adds space between the buttons */
-    justify-content: center; /* Center the buttons horizontally */
-    margin-top: 20px;
-}
-
-/* Button styling */
+/* STAT TYPE BUTTON */
 button {
-    background-color: #444;  /* Dark background for dark theme */
-    color: white;             /* White text for contrast */
-    padding: 12px 25px;     /* Increased padding for larger buttons */
-    font-size: 18px;  
-    margin-top: 30px;        /* Adjusted font size */
-    border: 2px solid #555;   /* Light border for visibility */
-    border-radius: 8px;       /* Rounded corners */
-    cursor: pointer;         /* Pointer cursor on hover */
-    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition */
+    background-color: #444;  
+    color: white;             
+    padding: 12px 25px;     
+    font-size: 18px;        
+    border: 2px solid #555;   
+    border-radius: 8px;       
+    cursor: pointer;         
+    transition: background-color 0.3s ease, transform 0.2s ease; 
+    margin: 5px;
+    margin-bottom: 30px;
 }
 
-/* Hover and active states for buttons */
 button:hover {
-    background-color: #333; /* Darker background on hover */
-    transform: scale(1.05); /* Slightly enlarge button on hover */
+    background-color: #333; 
+    transform: scale(1.05); 
 }
 
 button:active {
-    background-color: #222; /* Even darker on click */
-    transform: scale(1); /* Reset the scale on click */
+    background-color: #222; 
+    transform: scale(1); 
 }
 
 button:focus {
-    outline: none;  /* Remove focus outline */
+    outline: none;  
+}
+
+/* CHART TYPE BUTTON */
+.chart-toggle-button {
+    background-color: #2196F3;  
+    color: white;               
+    padding: 12px 25px;         
+    font-size: 18px;            
+    border: none;               
+    border-radius: 8px;         
+    cursor: pointer;         
+    transition: background-color 0.3s ease, transform 0.2s ease; 
+}
+
+.chart-toggle-button:hover {
+    background-color: #1976D2;  
+    transform: scale(1.05);    
+}
+
+.chart-toggle-button:active {
+    background-color: #1565C0;  
+    transform: scale(1);      
+}
+
+.chart-toggle-button:focus {
+    outline: none;  
+}
+
+/* LINKS TO ONLINE STATS */
+
+.links-container {
+    text-align: center; 
+}
+
+.links-container a {
+    display: inline-block; 
+    margin-right: 20px;   
+    font-size: 18px;      
+    font-weight: bold;
+    text-decoration: none;
+    padding-top: 20px;
+}
+
+/* STAT DESCRIPTION STYLING */
+#statDescription {
+    font-size: 24px;         
+    margin-top: 40px;          
+    color: white;             
+    line-height: 1.7;  
+    width: 60%;
+    text-align: center;  
 }
 
 /* CONCLUSION */
@@ -261,7 +302,7 @@ button:focus {
     background-color: black;
     color: white;
     border-top: 1px solid white; 
-    height: 35vh;
+    height: 55vh;
 }
 
 #conclusion h2 {
@@ -272,7 +313,7 @@ button:focus {
 }
 
 #conclusion p {
-    font-size: 1.2em;
+    font-size: 1.5em;
     line-height: 1.6;
     color: white;
     text-align: center; 
@@ -303,20 +344,19 @@ button:focus {
     font-size: 0.9em; 
 }
 
-/* Fade-in effect with initial black background */
+/* FADING EFFECTS */
+
 .fade-in {
     opacity: 0;
-    background-color: black; /* Start with black background */
-    transition: opacity 1s ease-in-out, background-color 1s ease-in-out; /* Smooth transition */
+    background-color: black; 
+    transition: opacity 1s ease-in-out, background-color 1s ease-in-out; 
 }
 
-/* Visible state when element is in view */
 .fade-in.visible {
     opacity: 1;
-    background-color: black; /* Fade to transparent when visible */
+    background-color: black; 
 }
 
-/* Optional: Adding a slight delay to each item for a cascading fade-in effect */
 .fade-in-delay {
     transition-delay: 2s;
 }
